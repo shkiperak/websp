@@ -1,0 +1,8 @@
+/* Здесь мы будем писать дополнительные стили, если стандартных классов Tailwind не хватит */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
