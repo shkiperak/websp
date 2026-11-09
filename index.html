@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,34 +16,48 @@
                 extend: {
                     colors: {
                         brand: {
-                            blue: '#0a58ca', /* Синий цвет как у них */
+                            blue: '#0a58ca',
+                            lightblue: '#38bdf8', /* Цвет меню со скрина */
                             light: '#f8f9fa',
                             text: '#212529'
                         }
                     },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans text-brand-text bg-white">
+<body class="font-sans text-brand-text bg-white overflow-x-hidden relative">
 
-    <!-- ШАПКА (Как на скриншоте 2) -->
+    <!-- ВЫЕЗЖАЮЩЕЕ МЕНЮ СЛЕВА (Бургер) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-lightblue z-[100] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="p-4 flex justify-between items-center border-b border-blue-400/30">
+            <span class="text-white font-bold text-xl">Меню</span>
+            <button onclick="toggleMenu()" class="text-white text-3xl hover:text-gray-200">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col p-6 gap-6 text-white text-xl font-medium">
+            <a href="#hero" onclick="toggleMenu()" class="hover:pl-2 transition-all">Главная</a>
+            <a href="#services" onclick="toggleMenu()" class="hover:pl-2 transition-all">Услуги</a>
+            <a href="#how-we-work" onclick="toggleMenu()" class="hover:pl-2 transition-all">Как мы работаем</a>
+            <a href="#portfolio" onclick="toggleMenu()" class="hover:pl-2 transition-all">Наши работы</a>
+            <a href="#contact" onclick="toggleMenu()" class="hover:pl-2 transition-all">Заказать звонок</a>
+        </nav>
+    </div>
+
+    <!-- ШАПКА -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
-            <!-- Мобильное меню (Бургер) -->
-            <button class="lg:hidden text-3xl text-brand-blue">
+            <!-- Кнопка меню -->
+            <button onclick="toggleMenu()" class="lg:hidden text-3xl text-brand-lightblue">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Логотип -->
+            <!-- Логотип (заглушка) -->
             <div class="flex items-center gap-2">
-                <div class="text-brand-blue text-2xl font-extrabold tracking-tighter uppercase">
-                    ГидроДел
-                </div>
+                <img src="https://gidrodel.online/wp-content/uploads/2020/09/logo_gidrodel1.png" alt="ГидроДел" class="h-10">
             </div>
 
             <!-- Телефон -->
@@ -54,37 +68,36 @@
         </div>
     </header>
 
-    <!-- БЕГУЩАЯ СТРОКА УСЛУГ (Как на скриншоте 7) -->
-    <div class="bg-gray-100 py-2 text-xs text-gray-500 uppercase tracking-widest text-center overflow-hidden whitespace-nowrap border-b border-gray-200 hidden md:block">
-        ГИДРОИЗОЛЯЦИЯ ПОДВАЛА • ГИДРОИЗОЛЯЦИЯ ФУНДАМЕНТА • ГИДРОИЗОЛЯЦИЯ ПАРКИНГА • ГИДРОИЗОЛЯЦИЯ БАССЕЙНА • ИНЪЕКЦИЯ
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="bg-gray-100 py-2 text-xs text-gray-500 uppercase tracking-widest text-center border-b border-gray-200 hidden md:block">
+        ГИДРОИЗОЛЯЦИЯ ПОДВАЛА • ГИДРОИЗОЛЯЦИЯ ФУНДАМЕНТА • ГИДРОИЗОЛЯЦИЯ ПАРКИНГА • ИНЪЕКЦИЯ
     </div>
 
-    <!-- ПЕРВЫЙ ЭКРАН (Как на скриншоте 7) -->
-    <section class="relative h-[400px] md:h-[500px] bg-gray-900 flex items-center">
-        <!-- Фоновая картинка подвала -->
+    <!-- ПЕРВЫЙ ЭКРАН -->
+    <section id="hero" class="relative h-[400px] md:h-[500px] bg-gray-900 flex items-center">
         <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60">
-        
         <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
             <h1 class="text-white text-3xl md:text-5xl font-bold max-w-2xl leading-tight">
                 Борьба с водой – не ваша забота, сухой подвал – наша работа!
             </h1>
+            <button onclick="document.getElementById('contact').scrollIntoView();" class="mt-8 bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded transition-colors">
+                Заказать звонок
+            </button>
         </div>
     </section>
 
-    <!-- БЛОК ПРЕИМУЩЕСТВ (Как на скриншоте 3) -->
+    <!-- БЛОК ПРЕИМУЩЕСТВ -->
     <section class="py-16 max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Блок 03 -->
             <div class="flex gap-6">
-                <div class="text-7xl font-bold text-brand-blue leading-none">03</div>
+                <div class="text-7xl font-bold text-brand-lightblue leading-none">03</div>
                 <div>
                     <h3 class="text-xl font-bold mb-2">Индивидуальный подход</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Наш специалист предложит вам лучшее решение, после осмотра вашего объекта.</p>
                 </div>
             </div>
-            <!-- Блок 04 -->
             <div class="flex gap-6">
-                <div class="text-7xl font-bold text-brand-blue leading-none">04</div>
+                <div class="text-7xl font-bold text-brand-lightblue leading-none">04</div>
                 <div>
                     <h3 class="text-xl font-bold mb-2">Гарантия качества</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Мы уверены в качестве нашей работы и даем гарантию 3 года.</p>
@@ -93,23 +106,156 @@
         </div>
     </section>
 
-    <!-- БЛОК ПАРТНЕРОВ (Как на скриншоте 3) -->
+    <!-- ПАРТНЕРЫ -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Наши партнеры</h2>
-            <p class="text-gray-600 text-sm max-w-3xl mx-auto mb-10">
-                Мы работаем только с лучшими, не используя аналоги! Каждый проект для нас индивидуален и мы всегда подбираем материалы, решающие конкретно именно ваши задачи.
-            </p>
-            
-            <!-- Сетка логотипов (пока заглушки текстом) -->
+            <p class="text-gray-600 text-sm max-w-3xl mx-auto mb-10">Мы работаем только с лучшими, не используя аналоги!</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
-                <div class="text-2xl font-bold text-red-800">Группа<br>ГидроСтрой</div>
+                <div class="text-xl font-bold text-red-800">Группа<br>ГидроСтрой</div>
                 <div class="text-xl font-bold text-blue-900 border-2 border-blue-900 px-2 py-1">PENETRON</div>
-                <div class="text-2xl font-bold text-blue-600"><i class="fa-solid fa-cube"></i> MAPEI</div>
-                <div class="text-2xl font-bold text-blue-700">гидРОЗО</div>
+                <div class="text-xl font-bold text-blue-600"><i class="fa-solid fa-cube"></i> MAPEI</div>
+                <div class="text-xl font-bold text-blue-700">гидРОЗО</div>
             </div>
         </div>
     </section>
 
+    <!-- УСЛУГИ -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Наши услуги</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Карточка 1 -->
+                <div class="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Гидроизоляция подвала</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">Качественная гидроизоляция подвала очень важна. Какие материалы используются? Какие технологии применяются?</p>
+                        </div>
+                        <a href="#contact" class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 p-4 rounded text-gray-900 font-semibold transition-colors mt-auto border border-gray-100">
+                            <span>Подробнее</span><i class="fa-solid fa-chevron-right text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1590496793907-6b6e0059efc2?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Инъекционная гидроизоляция</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">Технология абсолютной влагозащиты! Инъектирование эффективно, долговечно и просто в реализации.</p>
+                        </div>
+                        <a href="#contact" class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 p-4 rounded text-gray-900 font-semibold transition-colors mt-auto border border-gray-100">
+                            <span>Подробнее</span><i class="fa-solid fa-chevron-right text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАК МЫ РАБОТАЕМ (С мужиком в каске) -->
+    <section id="how-we-work" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Как мы работаем</h2>
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" alt="Прораб" class="rounded-lg shadow-xl w-full object-cover h-[400px]">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6 text-gray-700">
+                    <p class="text-lg">Более 6 лет наша компания успешно работает в области гидроизоляционных систем и решений. В штате работают первоклассные специалисты высокой квалификации.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-brand-lightblue mt-1"></i> <span>Бесплатный выезд инженера и осмотр объекта.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-brand-lightblue mt-1"></i> <span>Составление точной сметы и подбор материалов.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-brand-lightblue mt-1"></i> <span>Выполнение работ в срок с соблюдением всех технологий.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-brand-lightblue mt-1"></i> <span>Гарантия на все виды работ.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НАШИ РАБОТЫ -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="max-w-7xl150 mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Наши работы</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1590496793907-6b6e0059efc2?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-4307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" class="w-full h-64 object-cover rounded shadow-sm hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОРМА ЗАКАЗА -->
+    <section id="contact" class="py-16 bg-brand-lightblue">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8">Заказать услугу прямо сейчас</h2>
+            <form class="bg-white p-8 rounded-lg shadow-xl space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Ваше имя *</label>
+                        <input type="text" required class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-brand-blue transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Телефон *</label>
+                        <input type="tel" required class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-brand-blue transition-colors">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Вид работ</label>
+                    <select class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-brand-blue bg-white">
+                        <option>Гидроизоляция подвала</option>
+                        <option>Инъекционная гидроизоляция</option>
+                        <option>Гидроизоляция фундамента</option>
+                        <option>Другое</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Подробнее</label>
+                    <textarea rows="3" class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-brand-blue transition-colors"></textarea>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="bg-brand-lightblue hover:bg-sky-500 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg transition-colors">
+                        Заказать
+                    </button>
+                    <p class="text-xs text-gray-400 mt-4">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (FOOTER) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <img src="https://gidrodel.online/wp-content/uploads/2020/09/logo_gidrodel1.png" alt="ГидроДел" class="h-10 bg-white p-1 rounded mb-4">
+                <p class="text-gray-400 text-sm">Профессиональная гидроизоляция в Санкт-Петербурге и области.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Контакты</h4>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-phone mr-2"></i> +7 (812) 000-00-00</p>
+                <p class="text-gray-400 text-sm"><i class="fa-solid fa-envelope mr-2"></i> info@gidrodel-spb.ru</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Навигация</h4>
+                <ul class="text-gray-400 text-sm space-y-2">
+                    <li><a href="#hero" class="hover:text-white">Главная</a></li>
+                    <li><a href="#services" class="hover:text-white">Услуги</a></li>
+                    <li><a href="#portfolio" class="hover:text-white">Наши работы</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-xs mt-10 border-t border-gray-800 pt-6">
+            &copy; 2024 ГидроДел СПб. Все права защищены.
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
 </body>
 </html>
