@@ -7,20 +7,48 @@ html {
     scroll-behavior: smooth;
 }
 
-<script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true, // <-- ВОТ ЭТА СТРОКА ДОЛЖНА БЫТЬ ЗДЕСЬ
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+/* Стили для стрелок слайдера */
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 40px !important; 
+    height: 40px !important;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s;
+    
+    /* Опускаем стрелки вниз на уровень точек */
+    top: auto !important;
+    bottom: 12px !important;
+    margin-top: 0 !important;
+}
+
+/* Размер самой иконки стрелки внутри круга */
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/* Ставим левую стрелку слева от точек */
+.swiper-button-prev {
+    left: auto !important;
+    right: calc(50% + 45px) !important;
+}
+
+/* Ставим правую стрелку справа от точек */
+.swiper-button-next {
+    right: auto !important;
+    left: calc(50% + 45px) !important;
+}
+
+/* При наведении мышки делаем фон темнее */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Скрываем стрелки на мобильных телефонах, чтобы не мешали */
+@media (max-width: 768px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: none !important;
+    }
+}
