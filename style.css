@@ -1,10 +1,12 @@
-/* Сглаживание шрифтов */
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Убираем горизонтальный скролл */
-html, body {
-    overflow-x: hidden;
+// Функция для открытия/закрытия выезжающего меню
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    // Если меню скрыто (сдвинуто влево), показываем его
+    if (menu.classList.contains('-translate-x-full')) {
+        menu.classList.remove('-translate-x-full');
+        document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+    } else {
+        menu.classList.add('-translate-x-full');
+        document.body.style.overflow = 'auto'; // Возвращаем скролл
+    }
 }
