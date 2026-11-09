@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГидроДел СПб | Гидроизоляция в Санкт-Петербурге</title>
+    
+    <!-- Подключаем Tailwind CSS для быстрой верстки -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключаем шрифты (например, Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Наши стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0a58ca', /* Синий цвет с их сайта */
+                            dark: '#111827', /* Темный фон */
+                            light: '#f3f4f6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- ШАПКА САЙТА -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Логотип (пока текст, потом заменим на картинку) -->
+            <div class="flex items-center gap-2">
+                <div class="text-brand-blue text-3xl font-extrabold tracking-tighter">
+                    ГИДРОДЕЛ <span class="text-gray-400 text-sm font-normal">СПб</span>
+                </div>
+            </div>
+
+            <!-- Телефон и кнопка -->
+            <div class="flex items-center gap-6">
+                <div class="hidden md:block text-right">
+                    <a href="tel:+78120000000" class="text-xl font-bold text-gray-900 hover:text-brand-blue transition-colors">+7 (812) 000-00-00</a>
+                    <p class="text-xs text-gray-500">Работаем по СПб и ЛО</p>
+                </div>
+                <button class="bg-brand-blue hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md">
+                    Заказать звонок
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ПЕРВЫЙ ЭКРАН (HERO SECTION) -->
+    <section class="relative bg-brand-dark text-white overflow-hidden">
+        <!-- Фоновое изображение с затемнением (пока используем заглушку) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="Строительство" class="w-full h-full object-cover opacity-30">
+            <!-- Градиент для читаемости текста -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col justify-center min-h-[600px]">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-brand-blue/20 text-blue-300 border border-blue-400/30 px-3 py-1 rounded-full text-sm font-semibold mb-6">
+                    Работаем с 2010 года
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Профессиональная <span class="text-brand-blue text-blue-400">гидроизоляция</span> в Санкт-Петербурге
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                    Устраняем протечки фундаментов, паркингов и подвалов. Инъектирование, обмазочная и проникающая гидроизоляция с гарантией до 10 лет.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> Рассчитать стоимость
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white hover:text-brand-dark text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Вызвать инженера
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДКЛЮЧАЕМ СКРИПТЫ -->
+    <script src="script.js"></script>
+</body>
+</html>
