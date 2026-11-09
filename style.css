@@ -7,31 +7,20 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Стили для стрелок слайдера */
-.swiper-button-next, .swiper-button-prev {
-    color: white !important; /* Цвет стрелки */
-    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50%;
-    backdrop-filter: blur(4px); /* Легкое размытие фона под стрелкой */
-    transition: background-color 0.3s;
-}
-
-/* Размер самой иконки стрелки */
-.swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 24px !important;
-    font-weight: bold;
-}
-
-/* При наведении мышки делаем фон темнее */
-.swiper-button-next:hover, .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Скрываем стрелки на мобильных телефонах, чтобы не мешали */
-@media (max-width: 768px) {
-    .swiper-button-next, .swiper-button-prev {
-        display: none !important;
-    }
-}
+<script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, // <-- ВОТ ЭТА СТРОКА ДОЛЖНА БЫТЬ ЗДЕСЬ
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
