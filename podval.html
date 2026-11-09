@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гидроизоляция подвала | ГидроДел СПб</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { blue: '#0088cc', dark: '#222222', light: '#f5f5f5' }
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- ШАПКА (Та же, что на главной) -->
+    <header class="bg-white border-b border-gray-200 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-sm border-b border-gray-100">
+            <nav class="flex gap-4 text-gray-500">
+                <a href="index.html" class="hover:text-brand-blue">Главная</a>
+                <a href="podval.html" class="text-brand-blue font-bold">Гидроизоляция подвала</a>
+                <a href="fundament.html" class="hover:text-brand-blue">Гидроизоляция фундамента</a>
+                <!-- Добавь остальные ссылки по аналогии -->
+            </nav>
+            <div class="flex gap-6">
+                <a href="tel:+78120000000" class="font-bold hover:text-brand-blue"><i class="fa-solid fa-phone text-gray-400 mr-2"></i>+7 (812) 000-00-00</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html"><img src="https://gidrodel.online/wp-content/uploads/2020/09/logo_gidrodel1.png" alt="ГидроДел" class="h-12"></a>
+            <a href="index.html#s2" class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition-colors">Сделать заказ</a>
+        </div>
+    </header>
+
+    <!-- Мобильная шапка -->
+    <header class="bg-white p-4 flex justify-between items-center md:hidden border-b border-gray-200 sticky top-0 z-50">
+        <a href="index.html" class="text-2xl text-brand-blue"><i class="fa-solid fa-arrow-left"></i></a>
+        <img src="https://gidrodel.online/wp-content/uploads/2020/09/logo_gidrodel1.png" alt="ГидроДел" class="h-8">
+        <a href="tel:+78120000000" class="text-brand-blue text-xl"><i class="fa-solid fa-phone"></i></a>
+    </header>
+
+    <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+    <section class="bg-gray-900 text-white py-16 md:py-24 relative">
+        <img src="https://gidrodel.online/wp-content/uploads/2020/09/main_banner5-2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Гидроизоляция подвала</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl">Профессиональное устранение протечек и защита от грунтовых вод в Санкт-Петербурге</p>
+        </div>
+    </section>
+
+    <!-- КОНТЕНТ СТРАНИЦЫ -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="prose max-w-none text-gray-700 leading-relaxed space-y-6">
+                <p class="text-lg font-medium">Качественная гидроизоляция подвала очень важна. Какие материалы для этого используются? Какие технологии применяются?</p>
+                
+                <img src="https://gidrodel.online/wp-content/uploads/2020/08/2.jpg" class="w-full rounded-lg my-8 shadow-md">
+                
+                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Почему появляется вода в подвале?</h2>
+                <p>Основные причины — это грунтовые воды, капиллярный подсос влаги через микротрещины в бетоне, а также нарушение герметичности швов и вводов коммуникаций. Без профессионального вмешательства вода постепенно разрушает фундамент и способствует появлению плесени.</p>
+                
+                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Наши методы решения</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Инъекционная гидроизоляция:</strong> Закачка специальных гелей в трещины и швы для полного заполнения пустот.</li>
+                    <li><strong>Обмазочная гидроизоляция:</strong> Создание на поверхности стен и пола водонепроницаемой мембраны.</li>
+                    <li><strong>Проникающая гидроизоляция:</strong> Обработка бетона составами, которые кристаллизуются внутри пор и делают бетон водонепроницаемым.</li>
+                </ul>
+
+                <div class="bg-brand-blue/10 border-l-4 border-brand-blue p-6 rounded-r-lg mt-8">
+                    <h3 class="font-bold text-brand-blue mb-2">Нужна консультация?</h3>
+                    <p class="text-sm">Наш инженер бесплатно выедет на объект, проведет диагностику и составит точную смету работ.</p>
+                    <a href="index.html#s2" class="inline-block mt-4 bg-brand-blue text-white font-bold py-2 px-6 rounded hover:bg-blue-600 transition-colors">Вызвать инженера</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (Такой же, как на главной) -->
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <img src="https://gidrodel.online/wp-content/uploads/2020/09/logo_gidrodel1.png" alt="ГидроДел" class="h-10 bg-white p-1 rounded mb-4">
+                <p class="text-gray-400 text-sm">Компания «ГИДРОДЕЛ» предлагает широкий выбор услуг по гидроизоляции помещений.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Контакты</h4>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-phone mr-2"></i> +7 (812) 000-00-00</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Навигация</h4>
+                <ul class="text-gray-400 text-sm space-y-2">
+                    <li><a href="index.html" class="hover:text-white">Главная</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
