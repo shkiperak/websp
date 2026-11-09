@@ -90,13 +90,72 @@
     </div>
 
     <!-- s1: ГЛАВНЫЙ ЭКРАН (Слайдер) -->
-    <section id="s1" class="relative h-[400px] md:h-[500px] bg-gray-900 flex items-center">
-        <img src="https://gidrodel.online/wp-content/uploads/2020/09/main_banner5-2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
-            <div class="max-w-xl text-white">
-                <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Борьба с водой - не ваша забота, сухой подвал - наша работа!</h1>
-                <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+    <section id="s1" class="relative h-[400px] md:h-[500px] bg-gray-900">
+        <div class="swiper mySwiper w-full h-full">
+            <div class="swiper-wrapper">
+                
+                <!-- Слайд 1 -->
+                <div class="swiper-slide relative flex items-center">
+                    <img src="img/banner1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+                        <div class="max-w-xl text-white">
+                            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Борьба с водой - не ваша забота, сухой подвал - наша работа!</h1>
+                            <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 2 -->
+                <div class="swiper-slide relative flex items-center">
+                    <img src="img/banner2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+                        <div class="max-w-xl text-white">
+                            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">С заботой о фундаменте вашего дома!</h1>
+                            <p class="text-sm md:text-base text-gray-200 mb-6">Каков фундамент, таков и дом. Гидроизоляция фундамента — это один из важнейших этапов обеспечения устойчивости и долговечности здания.</p>
+                            <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 3 -->
+                <div class="swiper-slide relative flex items-center">
+                    <img src="img/banner3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+                        <div class="max-w-xl text-white">
+                            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Комфортный паркинг новыми технологиями!</h1>
+                            <p class="text-sm md:text-base text-gray-200 mb-6">Закачка инъекционного состава в конструкцию позволяет полностью вытеснить из нее воду и снять негативное воздействие влаги на бетон и арматуру.</p>
+                            <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 4 -->
+                <div class="swiper-slide relative flex items-center">
+                    <img src="img/banner4.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+                        <div class="max-w-xl text-white">
+                            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Бассейн — доступная роскошь!</h1>
+                            <p class="text-sm md:text-base text-gray-200 mb-6">Утечка бассейна может стать источником бесконечных проблем для владельцев. Позаботьтесь о надежности вашего бассейна на этапе строительства.</p>
+                            <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 5 -->
+                <div class="swiper-slide relative flex items-center">
+                    <img src="img/banner5.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+                        <div class="max-w-xl text-white">
+                            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Новая инновационная технология!</h1>
+                            <p class="text-sm md:text-base text-gray-200 mb-6">Инъекционная гидроизоляция помогает справиться там, где обычные способы бессильны.</p>
+                            <a href="#s3" class="inline-block bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded transition-colors">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <!-- Точки навигации (пагинация) -->
+            <div class="swiper-pagination !bottom-4"></div>
         </div>
     </section>
 
@@ -437,6 +496,22 @@
                     mobileMenu.classList.remove('flex');
                 });
             });
+        });
+    </script>
+    <!-- Подключение JS библиотеки Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Инициализация слайдера -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, // Бесконечная прокрутка
+            autoplay: {
+                delay: 4000, // Смена каждые 4 секунды
+                disableOnInteraction: false, // Не останавливать после свайпа
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // Можно кликать по точкам
+            },
         });
     </script>
 </body>
