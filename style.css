@@ -1,8 +1,10 @@
-/* Здесь мы будем писать дополнительные стили, если стандартных классов Tailwind не хватит */
-html {
-    scroll-behavior: smooth;
-}
-
+/* Сглаживание шрифтов */
 body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Убираем горизонтальный скролл */
+html, body {
+    overflow-x: hidden;
 }
