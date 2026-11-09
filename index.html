@@ -156,6 +156,9 @@
             </div>
             <!-- Точки навигации (пагинация) -->
             <div class="swiper-pagination !bottom-4"></div>
+            <!-- Стрелки навигации -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -503,14 +506,18 @@
     <!-- Инициализация слайдера -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            loop: true, // Бесконечная прокрутка
+            loop: true, // <-- ВОТ ЭТА СТРОКА ДОЛЖНА БЫТЬ ЗДЕСЬ
             autoplay: {
-                delay: 4000, // Смена каждые 4 секунды
-                disableOnInteraction: false, // Не останавливать после свайпа
+                delay: 4000,
+                disableOnInteraction: false,
             },
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true, // Можно кликать по точкам
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
     </script>
