@@ -78,7 +78,7 @@
     </header>
 
     <!-- ВЫПАДАЮЩЕЕ МОБИЛЬНОЕ МЕНЮ (ОВЕРЛЕЙ) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#2bb3eb] z-[100] hidden flex-col p-6 text-white overflow-y-auto">
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-blue z-[100] hidden flex-col p-6 text-white overflow-y-auto">
         <div class="flex justify-between items-center mb-10">
             <button id="close-menu-btn" class="text-3xl"><i class="fa-solid fa-xmark"></i></button>
             <a href="index.html"><img src="img/imglogo.png" alt="ГидроДел" class="h-8 bg-white p-1 rounded"></a>
@@ -86,12 +86,11 @@
         </div>
         <nav class="flex flex-col gap-6 text-xl font-light">
             <a href="#s1" class="hover:font-bold transition-all">Главная</a>
-            <a href="#s2" class="hover:font-bold transition-all">Заказ</a>
+            <a href="#s2" class="hover:font-bold transition-all">Заказать услугу</a>
             <a href="#s3" class="hover:font-bold transition-all">Услуги</a>
             <a href="#s6" class="hover:font-bold transition-all">Партнеры</a>
             <a href="#s7" class="hover:font-bold transition-all">Наши работы</a>
             <a href="#s8" class="hover:font-bold transition-all">Отзывы</a>
-            <a href="#s2" class="hover:font-bold transition-all">Заказ звонка</a>
             <a href="#contacts" class="hover:font-bold transition-all">Контакты</a>
             <a href="inekciya.html" class="hover:font-bold transition-all mt-4 border-t border-white/30 pt-4">Инъекция</a>
         </nav>
@@ -104,7 +103,7 @@
                 
                 <!-- Слайд 1 (Единственный H1) -->
                 <div class="swiper-slide relative flex items-center">
-                    <img src="img/banner1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <img src="img/banner1.jpg" alt="Гидроизоляция подвала в Санкт-Петербурге" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
                         <div class="max-w-xl text-white">
                             <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Борьба с водой - не ваша забота, сухой подвал - наша работа!</h1>
@@ -115,7 +114,7 @@
 
                 <!-- Слайд 2 (H2) -->
                 <div class="swiper-slide relative flex items-center">
-                    <img src="img/banner2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <img src="img/banner2.jpg" alt="Гидроизоляция фундамента" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
                         <div class="max-w-xl text-white">
                             <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">С заботой о фундаменте вашего дома!</h2>
@@ -127,7 +126,7 @@
 
                 <!-- Слайд 3 (H2) -->
                 <div class="swiper-slide relative flex items-center">
-                    <img src="img/banner3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <img src="img/banner3.jpg" alt="Гидроизоляция паркинга" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
                         <div class="max-w-xl text-white">
                             <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Комфортный паркинг новыми технологиями!</h2>
@@ -139,7 +138,7 @@
 
                 <!-- Слайд 4 (H2) -->
                 <div class="swiper-slide relative flex items-center">
-                    <img src="img/banner4.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <img src="img/banner4.jpg" alt="Гидроизоляция бассейна" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
                         <div class="max-w-xl text-white">
                             <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Бассейн — доступная роскошь!</h2>
@@ -151,7 +150,7 @@
 
                 <!-- Слайд 5 (H2) -->
                 <div class="swiper-slide relative flex items-center">
-                    <img src="img/banner5.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <img src="img/banner5.jpg" alt="Инъекционная гидроизоляция" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
                         <div class="max-w-xl text-white">
                             <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Новая инновационная технология!</h2>
@@ -197,6 +196,11 @@
                         
                         <p class="text-xs text-gray-400">* Поля, обязательные для заполнения</p>
                         
+                        <label class="flex items-start gap-2 text-xs text-gray-500 cursor-pointer pt-2">
+                            <input type="checkbox" required checked class="mt-0.5 accent-brand-blue">
+                            <span>Нажимая кнопку, вы даете согласие на обработку персональных данных</span>
+                        </label>
+
                         <button type="submit" class="bg-brand-blue text-white font-bold py-3 px-8 rounded w-full hover:bg-blue-600 transition-colors mt-4">Заказать</button>
                     </form>
                 </div>
@@ -337,7 +341,7 @@
                 
                 <!-- Работа 1 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/fontan.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Фонтан у м. Горьковская</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -347,7 +351,7 @@
 
                 <!-- Работа 2 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/basseyn.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Бассейн</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -357,7 +361,7 @@
 
                 <!-- Работа 3 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/cokol.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Цокольный этаж под бассейном</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -367,7 +371,7 @@
 
                 <!-- Работа 4 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/bassrum.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Бассейн</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -377,7 +381,7 @@
 
                 <!-- Работа 5 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/podval.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Подвал дома</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -387,7 +391,7 @@
 
                 <!-- Работа 6 -->
                 <div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/podvalvsev.jpg');">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                         <p class="text-sm text-gray-300">Объект</p>
                         <p class="font-bold mb-2">Подвал дома</p>
                         <p class="text-sm text-gray-300">по адресу:</p>
@@ -464,25 +468,28 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const closeBtn = document.getElementById('close-menu-btn');
 
-            // Открыть меню
-            menuBtn.addEventListener('click', function() {
+            function openMenu() {
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
-            });
+                document.body.style.overflow = 'hidden';
+            }
 
-            // Закрыть меню по крестику
-            closeBtn.addEventListener('click', function() {
+            function closeMenu() {
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
-            });
+                document.body.style.overflow = '';
+            }
+
+            // Открыть меню
+            menuBtn.addEventListener('click', openMenu);
+
+            // Закрыть меню по крестику
+            closeBtn.addEventListener('click', closeMenu);
 
             // Закрывать меню при клике на любую ссылку внутри
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                });
+                link.addEventListener('click', closeMenu);
             });
         });
     </script>
