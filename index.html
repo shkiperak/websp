@@ -314,13 +314,19 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <div class="max-w-7xl mx-auto px-4">
 <h2 class="text-3xl font-bold text-center mb-10">Наши работы</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-<!-- Работа 1: Фонтан у м. Горьковская -->
-<div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/fontan.jpg');">
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+<!-- Работа 1: Фонтан у м. Горьковская (До / После) -->
+<div onclick="openWorkModal('fontan')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/fontan.jpg');">
+<span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
+<i class="fa-solid fa-camera text-brand-red"></i> До / После (5 фото)
+</span>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent flex flex-col justify-end p-6 text-white">
 <p class="text-sm text-gray-300">Объект</p>
-<p class="font-bold mb-2">Фонтан у м. Горьковская</p>
+<p class="font-bold mb-1">Фонтан у м. Горьковская</p>
 <p class="text-sm text-gray-300">по адресу:</p>
-<p class="text-sm">г. Санкт-Петербург, Александровский парк, д.6</p>
+<p class="text-sm mb-3">г. Санкт-Петербург, Александровский парк, д.6</p>
+<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-brand-red group-hover:bg-red-700 px-3 py-1.5 rounded w-fit transition-colors shadow">
+Смотреть фотоотчёт &rarr;
+</span>
 </div>
 </div>
 <!-- Работа 2: Петергоф, Шахматова 14 (До / После) -->
@@ -513,6 +519,17 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <!-- Скрипт для мобильного меню и галереи работ -->
 <script>
 const workProjects = {
+fontan: {
+title: 'Фонтан у м. Горьковская',
+address: 'г. Санкт-Петербург, Александровский парк, д.6',
+photos: [
+{ src: 'img/fontdo.jpg', type: 'do' },
+{ src: 'img/fontdo1.jpg', type: 'do' },
+{ src: 'img/fontan.jpg', type: 'po' },
+{ src: 'img/fontpo.jpg', type: 'po' },
+{ src: 'img/fontpo4.jpg', type: 'po' }
+]
+},
 tipanova: {
 title: 'Деформационный шов в паркинге',
 address: 'г. Санкт-Петербург, ул. Типанова, д. 23',
