@@ -5,26 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Гидроизоляция подвала, бассейна, фундамента, паркинга в СПб | ГидроДел</title>
 <meta name="description" content="Профессиональная гидроизоляция в Санкт-Петербурге и Ленинградской области: подвалы, фундамент, паркинг, бассейны, инъектирование. Гарантия 3 года. Выезд инженера на объект. Звоните: +7 812 924-60-44">
+<link rel="canonical" href="https://gidrodel.ru/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ГидроДел">
+<meta property="og:title" content="Гидроизоляция в Санкт-Петербурге и ЛО | ГидроДел">
+<meta property="og:description" content="Гидроизоляция подвалов, фундаментов, паркингов и бассейнов в СПб и ЛО. Гарантия 3 года. Выезд инженера на объект.">
+<meta property="og:url" content="https://gidrodel.ru/">
+<meta property="og:image" content="https://gidrodel.ru/img/banner1.jpg">
 <link rel="icon" type="image/png" href="img/imglogo.png">
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<noscript>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</noscript>
+<link rel="stylesheet" href="tailwind.min.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-brand: {
-blue: '#0088cc',
-dark: '#222222',
-light: '#f5f5f5'
-}
-},
-fontFamily: { sans: ['Roboto', 'sans-serif'] }
-}
-}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "ГидроДел",
+  "url": "https://gidrodel.ru/",
+  "logo": "https://gidrodel.ru/img/imglogo.png",
+  "image": "https://gidrodel.ru/img/banner1.jpg",
+  "telephone": "+78129246044",
+  "email": "gidrodel2366@yandex.ru",
+  "priceRange": "от 990 ₽/пог.м",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "198188",
+    "addressLocality": "Санкт-Петербург",
+    "streetAddress": "пр-кт Стачек, д. 72, литера А, помещ. 1-Н, помещ. 547",
+    "addressCountry": "RU"
+  },
+  "areaServed": ["Санкт-Петербург", "Ленинградская область"]
 }
 </script>
 </head>
@@ -49,7 +69,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <!-- Нижняя часть шапки (Логотип + Меню + Кнопка) -->
 <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center gap-4">
 <!-- Логотип -->
-<a href="index.html" class="flex-shrink-0"><img src="img/imglogo.png" alt="ГидроДел" class="h-10"></a>
+<a href="index.html" class="flex-shrink-0"><img src="img/imglogo.png" alt="ГидроДел" width="825" height="157" class="h-10 w-auto"></a>
 <!-- Меню услуг -->
 <div class="flex items-center justify-center gap-2 lg:gap-4 flex-grow px-4">
 <a href="podval.html" class="hover:text-brand-blue hover:bg-gray-50 text-gray-800 text-[15px] font-semibold px-3 py-2 rounded-lg text-center leading-tight transition-colors">Гидроизоляция
@@ -70,15 +90,15 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </header>
 <!-- Мобильная шапка -->
 <header class="bg-white p-4 flex justify-between items-center md:hidden border-b border-gray-200 sticky top-0 z-50">
-<button id="mobile-menu-btn" class="text-2xl text-brand-blue"><i class="fa-solid fa-bars"></i></button>
-<a href="index.html"><img src="img/imglogo.png" alt="ГидроДел" class="h-8"></a>
-<a href="tel:+78129246044" class="text-brand-blue text-xl"><i class="fa-solid fa-phone"></i></a>
+<button id="mobile-menu-btn" type="button" aria-label="Открыть меню" class="text-2xl text-brand-blue"><i class="fa-solid fa-bars"></i></button>
+<a href="index.html"><img src="img/imglogo.png" alt="ГидроДел" width="825" height="157" class="h-8 w-auto"></a>
+<a href="tel:+78129246044" aria-label="Позвонить +7 812 924-60-44" class="text-brand-blue text-xl"><i class="fa-solid fa-phone"></i></a>
 </header>
 <!-- ВЫПАДАЮЩЕЕ МОБИЛЬНОЕ МЕНЮ (ОВЕРЛЕЙ) -->
 <div id="mobile-menu" class="fixed inset-0 bg-brand-blue z-[100] hidden flex-col p-6 text-white overflow-y-auto">
 <div class="flex justify-between items-center mb-10">
-<button id="close-menu-btn" class="text-3xl"><i class="fa-solid fa-xmark"></i></button>
-<a href="index.html"><img src="img/imglogo.png" alt="ГидроДел" class="h-8 bg-white p-1 rounded"></a>
+<button id="close-menu-btn" type="button" aria-label="Закрыть меню" class="text-3xl"><i class="fa-solid fa-xmark"></i></button>
+<a href="index.html"><img src="img/imglogo.png" alt="ГидроДел" width="825" height="157" class="h-8 w-auto bg-white p-1 rounded"></a>
 <a href="tel:+78129246044" class="text-sm font-bold"><i class="fa-solid fa-phone mr-1"></i> +7 812 924-60-44</a>
 </div>
 <nav class="flex flex-col gap-6 text-xl font-light">
@@ -98,7 +118,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <div class="swiper-wrapper">
 <!-- Слайд 1 (Единственный H1) -->
 <div class="swiper-slide relative flex items-center">
-<img src="img/banner1.jpg" alt="Гидроизоляция подвала в Санкт-Петербурге" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-60">
+<img src="img/banner1.jpg" alt="Гидроизоляция подвала в Санкт-Петербурге" fetchpriority="high" width="1320" height="500" class="absolute inset-0 w-full h-full object-cover opacity-60">
 <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
 <div class="max-w-xl text-white">
 <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Борьба с водой - не ваша забота, сухой подвал - наша работа!</h1>
@@ -109,7 +129,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 <!-- Слайд 2 (H2) -->
 <div class="swiper-slide relative flex items-center">
-<img src="img/banner2.jpg" alt="Гидроизоляция фундамента" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
+<img src="img/banner2.jpg" alt="Гидроизоляция фундамента" loading="lazy" width="1320" height="500" class="absolute inset-0 w-full h-full object-cover opacity-60">
 <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
 <div class="max-w-xl text-white">
 <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Защита фундамента от грунтовых и талых вод</h2>
@@ -120,7 +140,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 <!-- Слайд 3 (H2) -->
 <div class="swiper-slide relative flex items-center">
-<img src="img/banner3.jpg" alt="Гидроизоляция паркинга" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
+<img src="img/banner3.jpg" alt="Гидроизоляция паркинга" loading="lazy" width="1320" height="500" class="absolute inset-0 w-full h-full object-cover opacity-60">
 <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
 <div class="max-w-xl text-white">
 <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Сухой паркинг без течей и закрытия проезда</h2>
@@ -131,7 +151,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 <!-- Слайд 4 (H2) -->
 <div class="swiper-slide relative flex items-center">
-<img src="img/banner4.jpg" alt="Гидроизоляция бассейна" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
+<img src="img/banner4.jpg" alt="Гидроизоляция бассейна" loading="lazy" width="1320" height="500" class="absolute inset-0 w-full h-full object-cover opacity-60">
 <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
 <div class="max-w-xl text-white">
 <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Надежная гидроизоляция чаши бассейна</h2>
@@ -142,7 +162,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 <!-- Слайд 5 (H2) -->
 <div class="swiper-slide relative flex items-center">
-<img src="img/banner5.jpg" alt="Инъекционная гидроизоляция" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
+<img src="img/banner5.jpg" alt="Инъекционная гидроизоляция" loading="lazy" width="1320" height="500" class="absolute inset-0 w-full h-full object-cover opacity-60">
 <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
 <div class="max-w-xl text-white">
 <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Инъектирование — без раскопок и демонтажа</h2>
@@ -162,10 +182,10 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <!-- s2: СТАТЬ КЛИЕНТОМ + ФОРМА -->
 <section id="s2" class="py-16 bg-white">
 <div class="max-w-7xl mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-10"></h2>
+<h2 class="sr-only">Преимущества работы с ГидроДел и форма вызова инженера</h2>
 <div class="flex flex-col lg:flex-row gap-10 items-center">
 <div class="w-full lg:w-1/2">
-<img src="img/rabotnik.png" alt="Специалист по гидроизоляции" class="w-full max-w-md mx-auto mb-6">
+<img src="img/rabotnik.png" alt="Специалист по гидроизоляции" fetchpriority="high" width="383" height="303" class="w-full max-w-md mx-auto mb-6">
 <ul class="space-y-4 text-gray-600">
 <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-brand-blue text-[10px] mt-1.5"></i> <span><strong>Более 10 лет опыта работ по ремонту подземных сооружений.</strong> Более 500 выполненных объектов!</span></li>
 <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-brand-blue text-[10px] mt-1.5"></i> <span><strong>Подробная смета после осмотра</strong></span></li>
@@ -182,8 +202,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <input type="tel" name="phone" placeholder="Телефон *" required class="w-full border-b-2 border-gray-300 bg-transparent p-2 focus:outline-none focus:border-brand-blue">
 </div>
 <input type="text" name="details" placeholder="Коротко о проблеме (по желанию)" class="w-full border-b-2 border-gray-300 bg-transparent p-2 focus:outline-none focus:border-brand-blue">
-<p class="text-xs text-gray-400">* Поля, обязательные для заполнения</p>
-<label class="flex items-start gap-2 text-xs text-gray-500 cursor-pointer pt-2">
+<p class="text-xs text-gray-600">* Поля, обязательные для заполнения</p>
+<label class="flex items-start gap-2 text-xs text-gray-600 cursor-pointer pt-2">
 <input type="checkbox" required checked class="mt-0.5 accent-brand-blue">
 <span>Нажимая кнопку, вы даете согласие на обработку персональных данных</span>
 </label>
@@ -200,56 +220,56 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 <!-- Карточка 1 -->
 <div class="bg-white shadow-sm flex flex-col">
-<div class="h-48 bg-cover bg-center" style="background-image: url('img/podval.jpg');"></div>
+<div class="h-48 overflow-hidden"><img src="img/podval.jpg" alt="Гидроизоляция подвала" width="659" height="500" loading="lazy" class="w-full h-full object-cover"></div>
 <div class="p-6 flex-grow flex flex-col">
 <h3 class="text-xl font-bold mb-3">Гидроизоляция подвала</h3>
 <p class="text-gray-600 text-sm mb-6 flex-grow">Устраняем протечки, сырость и грибок в бетонных и кирпичных подвалах. Работаем изнутри — без раскопки фундамента снаружи.</p>
 <a href="podval.html" class="flex justify-between items-center bg-gray-50 p-4 border border-gray-100 hover:bg-gray-100 transition-colors font-semibold">
-<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-400"></i>
+<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-500"></i>
 </a>
 </div>
 </div>
 <!-- Карточка 2 -->
 <div class="bg-white shadow-sm flex flex-col">
-<div class="h-48 bg-cover bg-center" style="background-image: url('img/parking.jpg');"></div>
+<div class="h-48 overflow-hidden"><img src="img/parking.jpg" alt="Гидроизоляция паркинга" width="1920" height="2560" loading="lazy" class="w-full h-full object-cover"></div>
 <div class="p-6 flex-grow flex flex-col">
 <h3 class="text-xl font-bold mb-3">Гидроизоляция паркинга</h3>
 <p class="text-gray-600 text-sm mb-6 flex-grow">Герметизируем холодные швы, трещины и вводы труб. Убираем капель на машины и лужи на полу, не останавливая работу парковки.</p>
 <a href="parking.html" class="flex justify-between items-center bg-gray-50 p-4 border border-gray-100 hover:bg-gray-100 transition-colors font-semibold">
-<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-400"></i>
+<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-500"></i>
 </a>
 </div>
 </div>
 <!-- Карточка 3 -->
 <div class="bg-white shadow-sm flex flex-col">
-<div class="h-48 bg-cover bg-center" style="background-image: url('img/fundament1.jpg');"></div>
+<div class="h-48 overflow-hidden"><img src="img/fundament1.jpg" alt="Гидроизоляция фундамента" width="960" height="1280" loading="lazy" class="w-full h-full object-cover"></div>
 <div class="p-6 flex-grow flex flex-col">
 <h3 class="text-xl font-bold mb-3">Гидроизоляция фундамента</h3>
 <p class="text-gray-600 text-sm mb-6 flex-grow">Защищаем ленточные, плитные и свайные фундаменты от грунтовых и талых вод — как на этапе стройки, так и при ремонте готового дома.</p>
 <a href="fundament.html" class="flex justify-between items-center bg-gray-50 p-4 border border-gray-100 hover:bg-gray-100 transition-colors font-semibold">
-<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-400"></i>
+<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-500"></i>
 </a>
 </div>
 </div>
 <!-- Карточка 4 -->
 <div class="bg-white shadow-sm flex flex-col">
-<div class="h-48 bg-cover bg-center" style="background-image: url('img/inekciya.jpg');"></div>
+<div class="h-48 overflow-hidden"><img src="img/inekciya.jpg" alt="Инъекционная гидроизоляция" width="2560" height="1920" loading="lazy" class="w-full h-full object-cover"></div>
 <div class="p-6 flex-grow flex flex-col">
 <h3 class="text-xl font-bold mb-3">Инъекционная гидроизоляция</h3>
 <p class="text-gray-600 text-sm mb-6 flex-grow">Закачиваем полимерные смолы и гели прямо в трещины, швы или за стену. Останавливаем даже активную воду под напором без раскопок.</p>
 <a href="inekciya.html" class="flex justify-between items-center bg-gray-50 p-4 border border-gray-100 hover:bg-gray-100 transition-colors font-semibold">
-<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-400"></i>
+<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-500"></i>
 </a>
 </div>
 </div>
 <!-- Карточка 5 -->
 <div class="bg-white shadow-sm flex flex-col">
-<div class="h-48 bg-cover bg-center" style="background-image: url('img/bass.jpg');"></div>
+<div class="h-48 overflow-hidden"><img src="img/bass.jpg" alt="Гидроизоляция бассейна" width="659" height="500" loading="lazy" class="w-full h-full object-cover"></div>
 <div class="p-6 flex-grow flex flex-col">
 <h3 class="text-xl font-bold mb-3">Гидроизоляция бассейна</h3>
 <p class="text-gray-600 text-sm mb-6 flex-grow">Делаем надежную защиту чаши перед отделкой и чиним течи в действующих бассейнах. Составы выдерживают давление воды и химию.</p>
 <a href="basseyn.html" class="flex justify-between items-center bg-gray-50 p-4 border border-gray-100 hover:bg-gray-100 transition-colors font-semibold">
-<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-400"></i>
+<span>Подробнее</span><i class="fa-solid fa-angle-right text-gray-500"></i>
 </a>
 </div>
 </div>
@@ -260,7 +280,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <section id="s5" class="py-16 bg-white">
 <div class="max-w-7xl mx-auto px-4">
 <div class="w-full h-64 md:h-96 mb-10 rounded-lg overflow-hidden relative">
-<img src="img/rabotnik2.png" alt="Мастер за работой" class="w-full h-full object-contain" loading="lazy">
+<img src="img/rabotnik2.png" alt="Мастер за работой" width="493" height="413" class="w-full h-full object-contain" loading="lazy">
 </div>
 <h2 class="text-3xl font-bold text-center mb-6">Как мы работаем</h2>
 <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">За годы работы мы выстроили понятный процесс, в котором результат держится годами:</p>
@@ -302,10 +322,10 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <h2 class="text-3xl font-bold mb-4">Материалы, с которыми мы работаем</h2>
 <p class="text-gray-600 max-w-3xl mx-auto mb-10">Используем только оригинальные составы проверенных производителей — без дешевых аналогов. Подбираем систему под конкретные условия вашего объекта.</p>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-<img src="img/partner1.png" alt="Группа ГидроСтрой" class="h-12 object-contain" loading="lazy">
-<img src="img/partner2.png" alt="Penetron" class="h-10 object-contain" loading="lazy">
-<img src="img/partner3.png" alt="Mapei" class="h-12 object-contain" loading="lazy">
-<img src="img/partner4.png" alt="ГидРОЗО" class="h-12 object-contain" loading="lazy">
+<img src="img/partner1.png" alt="Группа ГидроСтрой" width="1069" height="319" class="h-12 w-auto object-contain" loading="lazy">
+<img src="img/partner2.png" alt="Penetron" width="1075" height="222" class="h-10 w-auto object-contain" loading="lazy">
+<img src="img/partner3.png" alt="Mapei" width="972" height="594" class="h-12 w-auto object-contain" loading="lazy">
+<img src="img/partner4.png" alt="ГидРОЗО" width="839" height="606" class="h-12 w-auto object-contain" loading="lazy">
 </div>
 </div>
 </section>
@@ -315,7 +335,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <h2 class="text-3xl font-bold text-center mb-10">Наши работы</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 <!-- Работа 1: Фонтан у м. Горьковская (До / После) -->
-<div onclick="openWorkModal('fontan')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/fontan.jpg');">
+<div onclick="openWorkModal('fontan')" class="relative group h-64 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all">
+<img src="img/fontan.jpg" alt="Фонтан у м. Горьковская — гидроизоляция" width="1200" height="956" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
 <i class="fa-solid fa-camera text-brand-red"></i> До / После (5 фото)
 </span>
@@ -330,7 +351,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 2: Петергоф, Шахматова 14 (До / После) -->
-<div onclick="openWorkModal('petergof')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/shahmatpo.jpg');">
+<div onclick="openWorkModal('petergof')" class="relative group h-64 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all">
+<img src="img/shahmatpo.jpg" alt="Подвал здания в Петергофе на ул. Шахматова 14" width="1600" height="1200" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
 <i class="fa-solid fa-camera text-brand-red"></i> До / После (5 фото)
 </span>
@@ -345,7 +367,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 3: Колпино, Северсталь (До / После) -->
-<div onclick="openWorkModal('kolpino')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/kolppo.jpg');">
+<div onclick="openWorkModal('kolpino')" class="relative group h-64 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all">
+<img src="img/kolppo.jpg" alt="Гидроизоляция чаши резервуара Северсталь в Колпино" width="1600" height="1200" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
 <i class="fa-solid fa-camera text-brand-red"></i> До / После (8 фото)
 </span>
@@ -360,7 +383,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 4: Горно-Алтайск (фото работ) -->
-<div onclick="openWorkModal('altai')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/altai2.jpg');">
+<div onclick="openWorkModal('altai')" class="relative group h-64 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all">
+<img src="img/altai2.jpg" alt="Заполнение пустот и гидроизоляция цокольного этажа в Горно-Алтайске" width="1600" height="1200" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
 <i class="fa-solid fa-camera text-brand-red"></i> 3 фото
 </span>
@@ -375,7 +399,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 5: Типанова 23 (До / После) -->
-<div onclick="openWorkModal('tipanova')" class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all" style="background-image: url('img/tipanpo.jpg');">
+<div onclick="openWorkModal('tipanova')" class="relative group h-64 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all">
+<img src="img/tipanpo.jpg" alt="Деформационный шов в паркинге на ул. Типанова 23" width="1600" height="1200" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <span class="absolute top-3 right-3 z-10 bg-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
 <i class="fa-solid fa-camera text-brand-red"></i> До / После (3 фото)
 </span>
@@ -390,7 +415,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 6: Подвал дома, наб. Фонтанки -->
-<div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/podval.jpg');">
+<div class="relative group h-64 rounded-lg overflow-hidden">
+<img src="img/podval.jpg" alt="Гидроизоляция подвала дома на набережной Фонтанки" width="659" height="500" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
 <p class="text-sm text-gray-300">Объект</p>
 <p class="font-bold mb-2">Подвал дома</p>
@@ -399,7 +425,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 7: Цокольный этаж под бассейном, Всеволожск -->
-<div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/cokol.jpg');">
+<div class="relative group h-64 rounded-lg overflow-hidden">
+<img src="img/cokol.jpg" alt="Гидроизоляция цокольного этажа под бассейном во Всеволожске" width="1200" height="956" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
 <p class="text-sm text-gray-300">Объект</p>
 <p class="font-bold mb-2">Цокольный этаж под бассейном</p>
@@ -408,7 +435,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 8: Бассейн, Всеволожск -->
-<div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/bassrum.jpg');">
+<div class="relative group h-64 rounded-lg overflow-hidden">
+<img src="img/bassrum.jpg" alt="Гидроизоляция бассейна во Всеволожске" width="1200" height="956" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
 <p class="text-sm text-gray-300">Объект</p>
 <p class="font-bold mb-2">Бассейн</p>
@@ -417,7 +445,8 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 </div>
 <!-- Работа 9: Подвал дома, Всеволожск -->
-<div class="relative group h-64 bg-cover bg-center rounded-lg overflow-hidden" style="background-image: url('img/podvalvsev.jpg');">
+<div class="relative group h-64 rounded-lg overflow-hidden">
+<img src="img/podvalvsev.jpg" alt="Гидроизоляция подвала дома во Всеволожске" width="1200" height="956" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent md:bg-black/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
 <p class="text-sm text-gray-300">Объект</p>
 <p class="font-bold mb-2">Подвал дома</p>
@@ -444,12 +473,12 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 </div>
 <div class="w-full md:w-1/3 flex gap-4">
 <div class="w-1/2 text-center">
-<img src="img/podvaldo.jpg" alt="Подвал до гидроизоляции" class="w-full object-cover rounded mb-2 shadow-sm" loading="lazy">
-<span class="text-xs text-gray-500">До проведения работ</span>
+<img src="img/podvaldo.jpg" alt="Подвал до гидроизоляции" width="250" height="300" class="w-full h-auto object-cover rounded mb-2 shadow-sm" loading="lazy">
+<span class="text-xs text-gray-600">До проведения работ</span>
 </div>
 <div class="w-1/2 text-center">
-<img src="img/podval.jpg" alt="Подвал после гидроизоляции" class="w-full object-cover rounded mb-2 shadow-sm" loading="lazy">
-<span class="text-xs text-gray-500">После проведения работ</span>
+<img src="img/podval.jpg" alt="Подвал после гидроизоляции" width="659" height="500" class="w-full h-auto object-cover rounded mb-2 shadow-sm" loading="lazy">
+<span class="text-xs text-gray-600">После проведения работ</span>
 </div>
 </div>
 </div>
@@ -460,7 +489,7 @@ fontFamily: { sans: ['Roboto', 'sans-serif'] }
 <footer id="contacts" class="bg-brand-dark text-white py-12">
 <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 <div>
-<img src="img/imglogo.png" alt="ГидроДел" class="h-10 bg-white p-1 rounded mb-4">
+<img src="img/imglogo.png" alt="ГидроДел" width="825" height="157" loading="lazy" class="h-10 w-auto bg-white p-1 rounded mb-4">
 <p class="text-gray-400 text-sm">Профессиональная гидроизоляция подвалов, фундаментов, паркингов и бассейнов в Санкт-Петербурге и Ленинградской области.</p>
 </div>
 <div>
@@ -612,7 +641,7 @@ btn.className = 'relative flex-shrink-0 w-16 h-12 md:w-20 md:h-14 rounded overfl
 const badgeColor = p.type === 'do' ? 'bg-red-600' : 'bg-emerald-600';
 const badgeText = p.type === 'do' ? 'ДО' : 'ПОСЛЕ';
 const badgeHtml = (p.type === 'do' || p.type === 'po') ? `<span class="absolute bottom-0.5 left-0.5 ${badgeColor} text-white text-[9px] font-bold px-1 rounded">${badgeText}</span>` : '';
-btn.innerHTML = `<img src="${p.src}" class="w-full h-full object-cover" alt="">${badgeHtml}`;
+btn.innerHTML = `<img src="${p.src}" class="w-full h-full object-cover" alt="${project.title}">${badgeHtml}`;
 container.appendChild(btn);
 });
 }
@@ -709,9 +738,10 @@ link.addEventListener('click', closeMenu);
 });
 </script>
 <!-- Подключение JS библиотеки Swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- Инициализация слайдера -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
 var swiper = new Swiper(".mySwiper", {
 loop: true,
 autoplay: {
@@ -726,6 +756,7 @@ navigation: {
 nextEl: ".swiper-button-next",
 prevEl: ".swiper-button-prev",
 },
+});
 });
 </script>
 </body>
