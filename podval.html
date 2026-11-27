@@ -166,11 +166,11 @@ if (e.key === 'Escape') closeOrderModal();
 Для чата в MAX найдите номер:<br><strong class="text-sky-200">+7 911 924-60-44</strong> <span id="fab-max-copied"></span>
 </div>
 <div id="fab-menu" class="hidden flex-col items-end gap-2.5">
-<!-- Если получите персональную ссылку вида https://max.ru/u/..., вставьте её вместо # и уберите onclick -->
-<a href="#" onclick="handleMaxClick(event)" aria-label="Написать в MAX по номеру +7 911 924-60-44" title="MAX: +7 911 924-60-44" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
+<!-- Если получите персональную ссылку вида https://max.ru/u/..., замените button обратно на <a href="..."> -->
+<button type="button" onclick="handleMaxClick(event)" aria-label="Написать в MAX по номеру +7 911 924-60-44" title="MAX: +7 911 924-60-44" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
 <span class="text-xs font-semibold">MAX</span>
 <span class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">MAX</span>
-</a>
+</button>
 <a href="https://t.me/+79643421207" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram +7 964 342-12-07" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
 <span class="text-xs font-semibold">Telegram</span>
 <span class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center text-lg"><i class="fa-brands fa-telegram"></i></span>
