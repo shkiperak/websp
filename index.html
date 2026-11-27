@@ -759,5 +759,50 @@ prevEl: ".swiper-button-prev",
 });
 });
 </script>
+<!-- ПЛАВАЮЩАЯ КНОПКА СВЯЗИ -->
+<div id="contact-fab" class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
+<div id="fab-menu" class="hidden flex-col items-end gap-2.5">
+<!-- Вставьте вашу ссылку на MAX вместо href="#" -->
+<a href="#" onclick="event.preventDefault()" aria-label="Написать в MAX" title="MAX (ссылка будет добавлена)" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
+<span class="text-xs font-semibold">MAX</span>
+<span class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">MAX</span>
+</a>
+<!-- Вставьте вашу ссылку на Telegram (например, https://t.me/ваш_ник) вместо href="#" -->
+<a href="#" onclick="event.preventDefault()" aria-label="Написать в Telegram" title="Telegram (ссылка будет добавлена)" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
+<span class="text-xs font-semibold">Telegram</span>
+<span class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center text-lg"><i class="fa-brands fa-telegram"></i></span>
+</a>
+<a href="tel:+78129246044" aria-label="Позвонить +7 812 924-60-44" class="flex items-center gap-2.5 bg-white text-gray-800 border border-gray-200 pl-3.5 pr-1.5 py-1.5 rounded-full shadow-lg hover:shadow-xl transition-all">
+<span class="text-xs font-semibold">Позвонить</span>
+<span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base"><i class="fa-solid fa-phone"></i></span>
+</a>
+</div>
+<button id="fab-toggle" type="button" onclick="toggleContactFab()" aria-label="Связаться с нами" aria-expanded="false" class="w-14 h-14 rounded-full bg-brand-blue hover:bg-blue-700 text-white shadow-xl flex items-center justify-center text-2xl transition-transform hover:scale-105">
+<i id="fab-icon-open" class="fa-solid fa-comments"></i>
+<i id="fab-icon-close" class="fa-solid fa-xmark hidden"></i>
+</button>
+</div>
+<script>
+function toggleContactFab(forceClose) {
+const menu = document.getElementById('fab-menu');
+const btn = document.getElementById('fab-toggle');
+const iconOpen = document.getElementById('fab-icon-open');
+const iconClose = document.getElementById('fab-icon-close');
+const isOpen = menu.classList.contains('flex');
+const shouldOpen = forceClose ? false : !isOpen;
+menu.classList.toggle('hidden', !shouldOpen);
+menu.classList.toggle('flex', shouldOpen);
+iconOpen.classList.toggle('hidden', shouldOpen);
+iconClose.classList.toggle('hidden', !shouldOpen);
+btn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e) {
+const fab = document.getElementById('contact-fab');
+if (fab && !fab.contains(e.target)) toggleContactFab(true);
+});
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') toggleContactFab(true);
+});
+</script>
 </body>
 </html>
